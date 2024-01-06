@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+
+application {
+    //mainModule = 'com.varankin.ocrc.jfx'
+    mainClass = 'org.tensorflow.example.HelloTensorFlow'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.tensorflow:tensorflow-core-platform:0.3.3")
+    //compile group: 'org.tensorflow', name: 'tensorflow-core-platform', version: '0.3.3'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
