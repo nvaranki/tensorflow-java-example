@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.tensorflow:tensorflow-core-platform:0.3.3")
+    implementation("org.tensorflow:tensorflow-core-platform:0.5.0")
     //compile group: 'org.tensorflow', name: 'tensorflow-core-platform', version: '0.3.3'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
